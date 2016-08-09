@@ -33,7 +33,7 @@ header {
    height: 800px;
    min-height: 500px;
    width: 100%;
-   background: #161415 url(../images/header-background.jpg) no-repeat top center;
+   background: #161415 url(../images/header.jpg) no-repeat top center;
    background-size: cover !important;
 	-webkit-background-size: cover !important;
    text-align: center;
@@ -65,7 +65,7 @@ header .wrapper-left
 	position: absolute;
 	text-align: left;
 	padding: 0px;
-	color: #FFFFFF;
+	color: #ffffff;
 	text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
 	left: 0px;
 	top: 85px;
@@ -75,7 +75,7 @@ header .wrapper-right
 	position: absolute;
 	text-align: right;
 	padding: 0px;
-	color: #FFFFFF;
+	color: #ffffff;
 	text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
 	right: 0px;
 	top: 85px;
@@ -89,8 +89,7 @@ header .banner-text h1 {
    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
 }
 header .banner-text h3 {
-   font: 18px/1.9em 'librebaskerville-regular', serif;
-   color: #A8A8A8;
+   color: #cccccc;
    margin: 0 auto;
    width: 70%;
    text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
@@ -222,6 +221,16 @@ ul#nav li.current a {
 	-ms-transition: background-color .2s ease-in-out;
 	transition: background-color .2s ease-in-out;
 	}
+	
+ul#nav li a:hover {
+	background-color: #54bf36;
+	
+	-webkit-transition: background-color .2s ease-in-out;
+	-moz-transition: background-color .2s ease-in-out;
+	-o-transition: background-color .2s ease-in-out;
+	-ms-transition: background-color .2s ease-in-out;
+	transition: background-color .2s ease-in-out;
+	}	
 
 
 /* ------------------------------------------------------------------ */
@@ -260,7 +269,6 @@ ul#nav li.current a {
    width: 58.33333%;
    padding-top: 6px;
 }
-#about .main-col { padding-right: 5%; }
 #about .download .button {
    margin-top: 6px;
    background: #444;
@@ -350,6 +358,13 @@ ul#nav li.current a {
 #experience .header-col { padding-top: 9px; }
 #experience .main-col { padding-right: 10%; }
 
+
+.divider {
+	height: 0px;
+    width: 50px;
+    border-top: 4px double #aaaaaa;
+    margin: auto;
+}
 /* Section Headers */
 .section-header {
 	text-align: center;
@@ -371,6 +386,7 @@ ul#nav li.current a {
 	border-radius: 5px;
 	width: 100px;
 	height: 100px;
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
 }
 .right-img {
 	float: right;
@@ -378,6 +394,7 @@ ul#nav li.current a {
 	border-radius: 5px;
 	width: 100px;
 	height: 100px;
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
 }
 
 .item {
@@ -484,39 +501,31 @@ ul#nav li.current a {
    border-radius: 5px 0 0 5px;
 }
 
-.skill {
-	border-bottom: 1px solid #E8E8E8;
-}
 
 .python {
-  	width: 60%;
+  	width: 85%;
   	-moz-animation: python 2s ease;
   	-webkit-animation: python 2s ease;
 }
 .aws {
-  	width: 70%;
+  	width: 55%;
   	-moz-animation: aws 2s ease;
   	-webkit-animation: aws 2s ease;
 }
 .cplus {
-  	width: 50%;
+  	width: 75%;
   	-moz-animation: cplus 2s ease;
   	-webkit-animation: cplus 2s ease;
 }
 .linux {
-  	width: 65%;
+  	width: 60%;
   	-moz-animation: linux 2s ease;
   	-webkit-animation: linux 2s ease;
 }
 .arduino {
-  	width: 85%;
+  	width: 90%;
   	-moz-animation: arduino 2s ease;
   	-webkit-animation: arduino 2s ease;
-}
-.jquery {
-  	width: 50%;
-  	-moz-animation: jquery 2s ease;
-  	-webkit-animation: jquery 2s ease;
 }
 
 @keyframes fadein {
@@ -545,54 +554,46 @@ ul#nav li.current a {
 }
 
 
-@-moz-keyframes photoshop {
+@-moz-keyframes python {
   0%   { width: 0px;  }
-  100% { width: 60%;  }
+  100% { width: 85%;  }
 }
-@-moz-keyframes illustrator {
+@-moz-keyframes aws {
   0%   { width: 0px;  }
   100% { width: 55%;  }
 }
-@-moz-keyframes wordpress {
+@-moz-keyframes cplus {
   0%   { width: 0px;  }
-  100% { width: 50%;  }
+  100% { width: 75%;  }
 }
-@-moz-keyframes css {
+@-moz-keyframes linux {
+  0%   { width: 0px;  }
+  100% { width: 60%;  }
+}
+@-moz-keyframes arduino {
   0%   { width: 0px;  }
   100% { width: 90%;  }
-}
-@-moz-keyframes html5 {
-  0%   { width: 0px;  }
-  100% { width: 80%;  }
-}
-@-moz-keyframes jquery {
-  0%   { width: 0px;  }
-  100% { width: 50%;  }
 }
 
-@-webkit-keyframes photoshop {
+@-webkit-keyframes python {
   0%   { width: 0px;  }
-  100% { width: 60%;  }
+  100% { width: 85%;  }
 }
-@-webkit-keyframes illustrator {
+@-webkit-keyframes aws {
   0%   { width: 0px;  }
   100% { width: 55%;  }
 }
-@-webkit-keyframes wordpress {
+@-webkit-keyframes cplus {
   0%   { width: 0px;  }
-  100% { width: 50%;  }
+  100% { width: 75%;  }
 }
-@-webkit-keyframes css {
+@-webkit-keyframes linux {
+  0%   { width: 0px;  }
+  100% { width: 60%;  }
+}
+@-webkit-keyframes arduino {
   0%   { width: 0px;  }
   100% { width: 90%;  }
-}
-@-webkit-keyframes html5 {
-  0%   { width: 0px;  }
-  100% { width: 80%;  }
-}
-@-webkit-keyframes jquery {
-  0%   { width: 0px;  }
-  100% { width: 50%;  }
 }
 
 /* ------------------------------------------------------------------ */
