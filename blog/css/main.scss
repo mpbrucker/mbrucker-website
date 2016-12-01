@@ -29,7 +29,7 @@ $title-shadow:     #70b9ec;
 $on-palm:          600px;
 $on-laptop:        800px;
 
-
+// Home page variables 
 
 // Using media queries with like this:
 // @include media-query($palm) {
@@ -50,6 +50,10 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting"
 ;
+
+body {
+    min-height: 100%;
+}
 
 // Modifying things in the header
 .site-home {
@@ -88,6 +92,8 @@ $on-laptop:        800px;
 .site-nav .page-link {
     color: #ffffff;
     text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.5);
 }
 
 .site-nav .page-link:hover {
@@ -96,12 +102,16 @@ $on-laptop:        800px;
     text-transform: uppercase;
 }
 
+.trigger a:hover {
+    text-decoration: none;
+}
+
 // Footer things
 .site-footer {
     background-color: $grey-color-dark;
     position: abolute; bottom: 0px;
     border: 0px;
-    padding: auto;
+    padding: 0px;
 }
 
 .site-footer .wrapper {
@@ -112,6 +122,10 @@ $on-laptop:        800px;
 
 .wrapper span {
     color: #ffffff;
+}
+
+.wrapper a:hover {
+    text-decoration: none;
 }
 
 //Main page content
@@ -141,6 +155,7 @@ $on-laptop:        800px;
     color: #ffffff;
     font-size: 100px;
     text-shadow: 2px 2px 5px rgba(0,0,0,.8);
+    z-index: -1;
 }
 
 .title-bar {
@@ -167,11 +182,67 @@ $on-laptop:        800px;
     font-size: 20px;
 }
 
-// General things
+// Main page things
 .page-content {
     padding-top: 86px;
 }
 
 .home {
     padding-top: 30px;
+}
+
+.home h1 {
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+.header-container {
+    display: inline-block;
+    margin-bottom: 17px;
+    border-bottom: 2px solid red;
+}
+
+// Image gallery things
+
+.image-gallery {
+    min-height: 401px;
+}
+
+.item {
+    width: 24%;
+    transition: all .2s ease-in-out;
+    float: left;
+    position: relative;
+}
+
+.item:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.item .after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    color: #ffffff;
+    transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.item:hover .after {
+    opacity: 1;
+    z-index: 2;
+}
+
+.item p {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 16pt;
+    font-weight: bold;
+    text-transform: uppercase;
 }
