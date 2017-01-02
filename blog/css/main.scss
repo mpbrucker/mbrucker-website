@@ -109,7 +109,6 @@ body {
 // Footer things
 .site-footer {
     background-color: $grey-color-dark;
-    position: abolute; bottom: 0px;
     border: 0px;
     padding: 0px;
 }
@@ -189,6 +188,7 @@ body {
 
 .home {
     padding-top: 30px;
+    height: 100%;
 }
 
 .home h1 {
@@ -202,14 +202,21 @@ body {
     border-bottom: 2px solid red;
 }
 
+.wrapper {
+    max-width: 75%;
+}
+
 // Image gallery things
 
 .image-gallery {
-    min-height: 401px;
+    min-width: 1000px;
+    min-height: 250px;
+    display: block;
 }
 
 .item {
-    width: 24%;
+    width: 250px;
+    height: 250px;
     transition: all .2s ease-in-out;
     float: left;
     position: relative;
